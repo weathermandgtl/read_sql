@@ -22,15 +22,13 @@ class Test(Resource):
         cursor.execute('SELECT * FROM GridTest WHERE id=1')
         record = cursor.fetchone()
         print(record)
-        db.commit()
-        db.close()
         return str(record)
 
 
 api.add_resource(Test, '/')
 
 if __name__ == '__main__':
-    # app.run()
+    # app.run(debug=True)
     app.run(host='0.0.0.0', port=8080)
 
 
