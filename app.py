@@ -21,6 +21,7 @@ class Test(Resource):
         cursor = db.cursor()
         cursor.execute('SELECT * FROM GridTest WHERE id=1')
         record = cursor.fetchone()
+        print(record)
         db.commit()
         db.close()
         return str(record)
