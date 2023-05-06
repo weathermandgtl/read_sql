@@ -11,6 +11,7 @@ db = mysql.connector.connect(
     password=os.getenv('MYSQLPASSWORD'),
     database=os.getenv('MYSQLDATABASE'))
 
+
 app = Flask("Test")
 api = Api(app)
 parser = reqparse.RequestParser()
