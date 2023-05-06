@@ -1,6 +1,7 @@
 import mysql.connector
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
+import os
 
 # db = mysql.connector.connect(host="localhost", user="root", password="skilover1!", database="testdatabase")
 db = mysql.connector.connect(
@@ -28,8 +29,8 @@ class Test(Resource):
 api.add_resource(Test, '/')
 
 if __name__ == '__main__':
-    # app.run()
-    app.run(host='0.0.0.0', port=8080)
+    app.run()
+    # app.run(host='0.0.0.0', port=8080)
 
 
 
